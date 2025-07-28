@@ -1,0 +1,36 @@
+services:
+  apache:
+    image: php:apache
+    container_name: apache-php
+    restart: unless-stopped
+    ports:
+      - "8000:80"
+    volumes:
+      - "./www:/var/www/html/:rw"
+
+  mariadb:
+    image: mariadb:latest
+    container_name: mariadb
+    restart: unless-stopped
+    environment:
+      MARIADB_USER: dbUser
+      MARIADB_PASSWORD: stayyoungblackandunique
+      MARIADB_ROOT_PASSWORD: imyoungblackandrich
+      MARIADB_ALLOW_EMPTY_ROOT_PASSWORD: 1
+      MARIADB_RANDOM_ROOT_PASSWORD: no
+    ports:
+      - "3306:3306"
+    volumes:
+      - "./db:/var/lib/mysql"
+
+  phpmyadmin:
+    image: phpmyadmin
+    container_name: phpmyadmin
+    restart: unless-stopped
+    environment:
+      PMA_HOST: mariadb
+      PMA_PORT: 3306
+      PMA_USER: dbUser
+      PMA_PASSWORD: stayyoungblackandunique
+    ports:
+      - "8001:80"
