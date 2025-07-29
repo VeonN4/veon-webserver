@@ -1,19 +1,39 @@
-# About
+# 🐳 Simple Apache Webserver with Docker Compose
 
-A simple Docker Compose alternative to XAMPP in Docker.
+A super simple Docker Compose setup to replace XAMPP for local development.
 
-I created this because I hate XAMPP errors.
+I built this because I was tired of running into endless XAMPP errors.
 
-This is ONLY for local development (Obviously), this setup is compeletely insecure. You can put it on production, if you want to get instant fired
+⚠️ **This setup is only for local development!**
+It's completely insecure and **not meant for production** — unless you’re trying to get fired instantly. 😬
 
-# Running
+---
 
-Before using it, make sure you have the following:
+## 🚀 Getting Started
 
-- Docker Compose
+### Prerequisites
 
-After checking that you have Docker Compose, you're good to go.
+* [Docker Compose](https://docs.docker.com/compose/)
+
+### Run It
+
+Once Docker Compose is installed, you're good to go:
 
 ```bash
 docker compose up -d
 ```
+
+That's it. No pain. You're welcome.
+
+---
+
+## 🗺️ Roadmap
+
+Here’s what I’m planning to add:
+
+* [x] Basic Apache + PHP + MySQL setup
+* [ ] Local DNS server
+* [ ] .env file support for custom config
+* [ ] Multiple PHP version support (e.g. switch between 7.4, 8.0, 8.3)
+* [ ] dashboard to manage containers?
+
