@@ -30,7 +30,7 @@
       </p>
       <div class="container">
         <p class="fw-bold">Services</p>
-        <button class="btn btn-primary" onclick='gotoPage()'><i class="bi bi-database-fill-gear"></i> PhpMyAdmin</button>
+        <button class="btn btn-primary" onclick='gotoURL("http://localhost:8001")'><i class="bi bi-database-fill-gear"></i> PhpMyAdmin</button>
         <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-database-fill-gear"></i> Pages</button>
         <ul class="dropdown-menu">
           <?php
