@@ -1,6 +1,8 @@
 services:
   apache:
-    image: php:apache
+    build:
+      context: ./
+      dockerfile: Dockerfile
     container_name: apache-php
     restart: unless-stopped
     ports:
