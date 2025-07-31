@@ -1,3 +1,4 @@
 db/*
 www/*
-www/!dashboard
+!www/dashboard/
+!www/dashboard/**
